@@ -100,23 +100,26 @@
             font-weight: 500;
         }
 
+        /* ===== 这里增加了输入框的高度（上下变宽） ===== */
         .setup-row input[type="text"],
         .setup-row textarea {
             background: #0d1825;
             border: 1px solid #3a5e85;
             color: #eaf2ff;
-            font-size: 0.9rem;
-            padding: 0.5rem 1.1rem;
+            font-size: 0.95rem;
+            padding: 0.8rem 1.2rem; /* 增加了上下内边距 */
             border-radius: 1.8rem;
             outline: none;
             transition: 0.2s;
             font-family: inherit;
             resize: vertical;
+            line-height: 1.5;
         }
 
         .setup-row textarea {
             border-radius: 1.2rem;
-            min-height: 60px;
+            min-height: 100px; /* 增加了最小高度 */
+            padding: 0.9rem 1.2rem;
         }
 
         .setup-row input:focus,
@@ -714,7 +717,7 @@
         <div class="setup-row">
             <label style="flex:1; align-items: flex-start;">
                 📖 句子（挑战/奖励格出现）
-                <textarea id="sentenceInput" class="sentence-input" rows="3"
+                <textarea id="sentenceInput" class="sentence-input" rows="4"
                           placeholder="每行一个句子，例如：&#10;喝一杯饮料的时候,怎么能先喝下面的再喝上面的?&#10;今天天气真好，我们一起去公园玩。">喝一杯饮料的时候,怎么能先喝下面的再喝上面的?
 今天天气真好，我们一起去公园玩。
 小猫在阳光下打盹，懒洋洋的。</textarea>
